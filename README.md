@@ -10,7 +10,7 @@ I used SCSS preprocessor and used Sass 3.5.1 in order to build index.css: sass i
 
 All edits were done using HTML and CSS only.
 
-Solution is live here: https://jasminegump.github.io/huddle-landing-page/
+Solution is live here: https://jasminegmp.github.io/huddle-landing-page/
 
 
 ## Where to find everything
