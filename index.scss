@@ -1,17 +1,17 @@
 // variable defines
 $main-fonts: 'Open Sans', sans-serif;
 $header-fonts: 'Poppins', sans-serif;;
+$font-size-pixel: 12px;
 $bg-desktop: "images/bg-desktop.svg";
 $bg-mobile: "images/bg-mobile.svg";
 $dark-purple: hsl(257, 40%, 49%);
 $light-purple: hsl(257, 20%, 49%);
 $font-color: #ffffff;
+$main-size: 1em;
+$header-size: 1.75em;
+$footer-size: 0.8em;
 $margin-size: 20px;
-$font-size-pixel: 12px;
-$header-size: 1.5em;
-$main-size: 1.3em;
 $button-size: .9em;
-$footer-size: 0.6em;
 $button-color: #ffffff;
 $box-shadow:  2px 2px 10px #555555;
 
@@ -19,14 +19,13 @@ $box-shadow:  2px 2px 10px #555555;
 // import defines
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Poppins:400,700&display=swap');
 
-
-h1{
-	font-family: $header-fonts;
-	font-size: $header-size;
+html{
+	text-align: center;
+	margin: $margin-size*2;
 }
 
 body {
-	background: url($bg-desktop) no-repeat center center fixed; 
+	background: url($bg-mobile) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -35,43 +34,59 @@ body {
 	font-size: $font-size-pixel;
 	font-family: $main-fonts;
 	color: $font-color;
-	margin: $margin-size * 2;
 	font-size: $main-size;
+}
+
+
+h1{
+	font-family: $header-fonts;
+	font-size: $header-size;
+}
+
+#container{
+	display: flex;
+	flex-wrap: wrap;
+	//border: 2px solid green;
+}
+
+#mockup{
+	//border: 1px solid white;
+	width: 100%;
+}
+
+.fit-image{
+	width: 100%;
+	height: auto;
+}
+
+#info{
+	//border: 1px solid blue;
+	width: 100%;
+}
+
+#icons{
+	//border: 1px solid red;
+	margin-top: $margin-size;
+	width: 100%;
+	font-size: $header-size;
 }
 
 a{
 	color: $font-color;
 }
 
-footer{
-	font-size: $footer-size;
-}
-
-#container{
-	display: flex;
-
-}
-
-.row{
-	flex-direction: row;
-	flex: 1;
-	align-items: center; // horizontal center for column
-	text-align: center; // vertical center for column;
-}
-
-.column{
-
-	flex-direction: column;
-	flex: 1;
+#icons a{
+	text-decoration: none;
 	margin: $margin-size;
 }
 
-#info{
-	text-align: left;
+footer{
+	margin-top: $margin-size;
+	font-size: $footer-size;
 }
 
 button{
-	width: 40%;
+	width: $margin-size * 8;
 	padding: $margin-size/2;
 	border-radius: $margin-size*2;
 	background-color: $button-color;
@@ -80,32 +95,39 @@ button{
 	box-shadow: $box-shadow;
 }
 
-#icons{
-	
-	text-align: right;
-	font-size: $main-size;
-	
-}
 
-#icons a{
-	text-decoration: none;
-	margin-right: $margin-size;
-}
-
-// mobile
-@media screen and (max-width:500px) {
+// desktop mode
+@media screen and (min-width:800px) {
 	body {
-		margin: 10%;
-		background: url($bg-mobile) no-repeat center center fixed; 
+		background: url($bg-desktop) no-repeat center center fixed;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
-		background-size: cover;
+		background-size: cover; 
 		background-color: $dark-purple;
-		font-size: $font-size-pixel;
-		font-family: $main-fonts;
-		color: blue;
-		margin: $margin-size * 2;
-		font-size: $main-size;
+
 	}
+
+
+	#container{
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center; // horizontal center
+	}
+
+	#mockup{
+		width: 58%;
+	}
+
+	#info{
+		margin-left: 3%;
+		width: 38%;
+		text-align: left;
+	}
+
+	#icons{
+		text-align: right;
+	}
+
+
 }
