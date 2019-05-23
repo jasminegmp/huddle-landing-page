@@ -93,8 +93,9 @@ button{
 }
 
 // mobile
-@media screen and (max-device-width:1000px) {
+@media screen and (max-device-width:500) {
 	body {
+		margin: 10%;
 		background: url($bg-mobile) no-repeat center center fixed; 
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -103,7 +104,7 @@ button{
 		background-color: $dark-purple;
 		font-size: $font-size-pixel;
 		font-family: $main-fonts;
-		color: red;
+		color: blue;
 		margin: $margin-size * 2;
 		font-size: $main-size;
 	}

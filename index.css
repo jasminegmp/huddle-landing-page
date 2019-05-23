@@ -56,8 +56,9 @@ button {
   text-decoration: none;
   margin-right: 20px; }
 
-@media screen and (max-device-width: 1000px) {
+@media screen and (max-device-width: 500) {
   body {
+    margin: 10%;
     background: url("images/bg-mobile.svg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -66,7 +67,7 @@ button {
     background-color: #674baf;
     font-size: 12px;
     font-family: "Open Sans", sans-serif;
-    color: red;
+    color: blue;
     margin: 40px;
     font-size: 1.3em; } }
 
