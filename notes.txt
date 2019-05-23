@@ -1,4 +1,0 @@
-https://jasminegump.github.io/huddle-landing-page/
-
-compile sass using:
-sass index.scss:index.css
