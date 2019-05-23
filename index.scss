@@ -93,7 +93,7 @@ button{
 }
 
 // mobile
-@media screen and (max-device-width:500) {
+@media screen and (max-width:500px) {
 	body {
 		margin: 10%;
 		background: url($bg-mobile) no-repeat center center fixed; 
