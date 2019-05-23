@@ -2,15 +2,16 @@
 $main-fonts: 'Open Sans', sans-serif;
 $header-fonts: 'Poppins', sans-serif;;
 $bg-desktop: "images/bg-desktop.svg";
+$bg-mobile: "images/bg-mobile.svg";
 $dark-purple: hsl(257, 40%, 49%);
 $light-purple: hsl(257, 20%, 49%);
 $font-color: #ffffff;
 $margin-size: 20px;
 $font-size-pixel: 12px;
-$header-size: 1.6em;
-$main-size: 1.5em;
-$button-size: 1em;
-$footer-size: 0.75em;
+$header-size: 1.5em;
+$main-size: 1.3em;
+$button-size: .9em;
+$footer-size: 0.6em;
 $button-color: #ffffff;
 $box-shadow:  2px 2px 10px #555555;
 
@@ -18,16 +19,6 @@ $box-shadow:  2px 2px 10px #555555;
 // import defines
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Poppins:400,700&display=swap');
 
-html{
-	background: url($bg-desktop) no-repeat center center fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	background-color: $dark-purple;
-	font-size: $font-size-pixel;
-
-}
 
 h1{
 	font-family: $header-fonts;
@@ -35,6 +26,13 @@ h1{
 }
 
 body {
+	background: url($bg-desktop) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: $dark-purple;
+	font-size: $font-size-pixel;
 	font-family: $main-fonts;
 	color: $font-color;
 	margin: $margin-size * 2;
@@ -92,4 +90,21 @@ button{
 #icons a{
 	text-decoration: none;
 	margin-right: $margin-size;
+}
+
+// mobile
+@media screen and (max-width:375px) {
+	body {
+		background: url($bg-mobile) no-repeat center center fixed; 
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-color: $dark-purple;
+		font-size: $font-size-pixel;
+		font-family: $main-fonts;
+		color: $font-color;
+		margin: $margin-size * 2;
+		font-size: $main-size;
+	}
 }
